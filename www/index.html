@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="cordova.js"></script>
+        <!-- Link na CSS stil -->
+        <link href="css/glavniStil.css" type="text/css" rel="stylesheet" />
+        <!-- Link na JavaScript datoteku -->
+        <script type="text/javascript" src="js/main.js"></script>
+        <link rel="stylesheet"href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css"/>
+        <script src="http://code.jquery.com/jquery-1.11.1.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <meteor add cordova:org.apache.cordova.inappbrowser@0.5.4>
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Premier League - Informations</title>
+    </head>
+    <body>
+      <div id="aplikacija">
+        <div data-role="header" id="naslov">
+          
+          <div class="topnav">
+              <a class="active" href="#pocetna" id="a_pocetna">Pocetna</a>
+              <a href="#timovi" id="a_timovi">Tim</a>
+              
+              <a href="#favoriti" id="a_favoriti">Favoriti</a>
+              
+          </div>
+          
+          <select id="odabir_tim">
+            
+            <option value="null" selected>Izaberi tim</option>
+            <option value="1">Arsenal</option>
+            <option value="2">AFC Bournemouth</option>
+            <option value="3">Brighton and Hove Albion</option>
+            <option value="4">Burnley</option>
+            <option value="5">Cardiff</option>
+            <option value="6">Chelsea</option>
+            <option value="7">Crystal Palace</option>
+            <option value="8">Everton</option>
+            <option value="9">Fulham</option>
+            <option value="10">Huddersfied Town</option>
+            <option value="11">Leicester City</option>
+            <option value="12">Liverpool</option>
+            <option value="13">Manchester City</option>
+            <option value="14">Manchester United</option>
+            <option value="15">Newcastle United</option>
+            <option value="16">Southampton</option>
+            <option value="17">Tottenham Hotspur</option>
+            <option value="18">Watford</option>
+            <option value="19">West Ham United</option>
+            <option value="20">Wolverhampton Wanderers</option>
+            
+
+          </select>
+          
+          <button id="potvrdi">Potvrdi</button>
+          <button id="ocisti">Obrisi favorite</button>
+          
+          
+          
+          <img src="img/pl_banner.jpg" id="slika_pl">
+          
+
+        </div>
+        <div data="main" id="pocetna" style="overflow-x:auto">
+        <div id="div_tablica">
+          
+          <span id="labela"><b>Tablica</b></span>
+          <table id="tablica">
+            
+            <tr id="naslov_tablica">
+              <td>Poz.</td>
+              <td>Klub</td>
+              <td>Odigrane utakmice</td>
+              <td>P</td>
+              <td>N</td>
+              <td>I</td>
+              <td>Bodovi</td>
+              <td>Gol razlika</td>
+              
+            </tr>
+            <tr>
+              <td>1.</td>
+              <td id="ime1"></td>
+              <td id="oi1"></td>
+              <td id="p1"></td>
+              <td id="n1"></td>
+              <td id="i1"></td>
+              <td id="bod1"></td>
+              <td id="gr1"></td>
+
+            </tr>
+            <tr>
+              <td>2.</td>
+              <td id="ime2"></td>
+              <td id="oi2"></td>
+              <td id="p2"></td>
+              <td id="n2"></td>
+              <td id="i2"></td>
+              <td id="bod2"></td>
+              <td id="gr2"></td>
+
+            </tr>
+            <tr>
+              <td>3.</td>
+              <td id="ime3"></td>
+              <td id="oi3"></td>
+              <td id="p3"></td>
+              <td id="n3"></td>
+              <td id="i3"></td>
+              <td id="bod3"></td>
+              <td id="gr3"></td>
+
+            </tr>
+            <tr>
+              <td>4.</td>
+              <td id="ime4"></td>
+              <td id="oi4"></td>
+              <td id="p4"></td>
+              <td id="n4"></td>
+              <td id="i4"></td>
+              <td id="bod4"></td>
+              <td id="gr4"></td>
+
+            </tr>
+            <tr>
+              <td>5.</td>
+              <td id="ime5"></td>
+              <td id="oi5"></td>
+              <td id="p5"></td>
+              <td id="n5"></td>
+              <td id="i5"></td>
+              <td id="bod5"></td>
+              <td id="gr5"></td>
+
+            </tr>
+            <tr>
+              <td>6.</td>
+              <td id="ime6"></td>
+              <td id="oi6"></td>
+              <td id="p6"></td>
+              <td id="n6"></td>
+              <td id="i6"></td>
+              <td id="bod6"></td>
+              <td id="gr6"></td>
+
+            </tr>
+            <tr>
+              <td>7.</td>
+              <td id="ime7"></td>
+              <td id="oi7"></td>
+              <td id="p7"></td>
+              <td id="n7"></td>
+              <td id="i7"></td>
+              <td id="bod7"></td>
+              <td id="gr7"></td>
+
+            </tr>
+            <tr>
+              <td>8.</td>
+              <td id="ime8"></td>
+              <td id="oi8"></td>
+              <td id="p8"></td>
+              <td id="n8"></td>
+              <td id="i8"></td>
+              <td id="bod8"></td>
+              <td id="gr8"></td>
+
+            </tr>
+            <tr>
+              <td>9.</td>
+              <td id="ime9"></td>
+              <td id="oi9"></td>
+              <td id="p9"></td>
+              <td id="n9"></td>
+              <td id="i9"></td>
+              <td id="bod9"></td>
+              <td id="gr9"></td>
+
+            </tr>
+            <tr>
+              <td>10.</td>
+              <td id="ime10"></td>
+              <td id="oi10"></td>
+              <td id="p10"></td>
+              <td id="n10"></td>
+              <td id="i10"></td>
+              <td id="bod10"></td>
+              <td id="gr10"></td>
+
+            </tr>
+            <tr>
+              <td>11.</td>
+              <td id="ime11"></td>
+              <td id="oi11"></td>
+              <td id="p11"></td>
+              <td id="n11"></td>
+              <td id="i11"></td>
+              <td id="bod11"></td>
+              <td id="gr11"></td>
+
+            </tr>
+            <tr>
+              <td>12.</td>
+              <td id="ime12"></td>
+              <td id="oi12"></td>
+              <td id="p12"></td>
+              <td id="n12"></td>
+              <td id="i12"></td>
+              <td id="bod12"></td>
+              <td id="gr12"></td>
+
+            </tr>
+            <tr>
+              <td>13.</td>
+              <td id="ime13"></td>
+              <td id="oi13"></td>
+              <td id="p13"></td>
+              <td id="n13"></td>
+              <td id="i13"></td>
+              <td id="bod13"></td>
+              <td id="gr13"></td>
+
+            </tr>
+            <tr>
+              <td>14.</td>
+              <td id="ime14"></td>
+              <td id="oi14"></td>
+              <td id="p14"></td>
+              <td id="n14"></td>
+              <td id="i14"></td>
+              <td id="bod14"></td>
+              <td id="gr14"></td>
+
+            </tr>
+            <tr>
+              <td>15.</td>
+              <td id="ime15"></td>
+              <td id="oi15"></td>
+              <td id="p15"></td>
+              <td id="n15"></td>
+              <td id="i15"></td>
+              <td id="bod15"></td>
+              <td id="gr15"></td>
+
+            </tr>
+            <tr>
+              <td>16.</td>
+              <td id="ime16"></td>
+              <td id="oi16"></td>
+              <td id="p16"></td>
+              <td id="n16"></td>
+              <td id="i16"></td>
+              <td id="bod16"></td>
+              <td id="gr16"></td>
+
+            </tr>
+            <tr>
+              <td>17.</td>
+              <td id="ime17"></td>
+              <td id="oi17"></td>
+              <td id="p17"></td>
+              <td id="n17"></td>
+              <td id="i17"></td>
+              <td id="bod17"></td>
+              <td id="gr17"></td>
+
+            </tr>
+            <tr>
+              <td>18.</td>
+              <td id="ime18"></td>
+              <td id="oi18"></td>
+              <td id="p18"></td>
+              <td id="n18"></td>
+              <td id="i18"></td>
+              <td id="bod18"></td>
+              <td id="gr18"></td>
+
+            </tr>
+            <tr>
+              <td>19.</td>
+              <td id="ime19"></td>
+              <td id="oi19"></td>
+              <td id="p19"></td>
+              <td id="n19"></td>
+              <td id="i19"></td>
+              <td id="bod19"></td>
+              <td id="gr19"></td>
+
+            </tr>
+            <tr>
+              <td>20.</td>
+              <td id="ime20"></td>
+              <td id="oi20"></td>
+              <td id="p20"></td>
+              <td id="n20"></td>
+              <td id="i20"></td>
+              <td id="bod20"></td>
+              <td id="gr20"></td>
+
+            </tr>
+            
+          </table>
+        </div>
+        <div id="div_tim" style: hidden>
+          
+          <img id="slika_tim1">
+          <br>
+          <span id="span_klub_ime"></span><br>
+          <span id="nadimak_klub"></span><button id="btnFavoritKlub">Dodaj favorita!</button>
+          
+          
+          <b><u>Opis kluba:</b></u>
+          <p id="opsirno_klub"></p>
+          <span id="imeStadion"></span>
+          <u><b>Opis stadiona:</b></u>
+          <p id="opsirno_stadion"></p>
+          
+          
+          <h1>Igrači:</h1>
+          <table id="tablica_igraci">
+            
+            <tr>
+              <td><img id="igr1" width="100%" height="100%" style="display: block"><span id="impr1"></span></td>
+              <td><img id="igr2" width="100%" height="100%" style="display: block"><span id="impr2"></span></td>
+              <td><img id="igr3" width="100%" height="100%" style="display: block"><span id="impr3"></span></td>
+              <td><img id="igr4" width="100%" height="100%" style="display: block"><span id="impr4"></span></td>
+            </tr>
+              
+            <tr>
+              <td><br><img id="igr5" width="100%" height="100%" style="display: block"><span id="impr5"></span></td>
+              <td><br><img id="igr6" width="100%" height="100%" style="display: block"><span id="impr6"></span></td>
+              <td><br><img id="igr7" width="100%" height="100%" style="display: block"><span id="impr7"></span></td>
+              <td><br><img id="igr8" width="100%" height="100%" style="display: block"><span id="impr8"></span></td>
+              
+            </tr>
+              
+            <tr>
+              <td min-width="25%" height="25%"><br><img id="igr9" width="100%" height="100%" style="display: block"><span id="impr9"></span></td>
+              <td min-width="25%" height="25%"><br><img id="igr10" width="100%" height="100%" style="display: block"><span id="impr10"></span></td>
+              <td min-width="25%" height="25%"><br><img id="igr11" width="100%" height="100%" style="display: block"><span id="impr11"></span></td>
+              <td min-width="25%" height="25%"><br><img id="igr12" width="100%" height="100%" style="display: block"><span id="impr12"></span></td>
+              
+            </tr>
+            <tr>
+              <td min-width="25%" height="25%"><br><img id="igr13" width="100%" height="100%" style="display: block"><span id="impr13"></span></td>
+              <td min-width="25%" height="25%"><br><img id="igr14" width="100%" height="100%" style="display: block"><span id="impr14"></span></td>
+              <td min-width="25%" height="25%"><br><img id="igr15" width="100%" height="100%" style="display: block"><span id="impr15"></span></td>
+              <td min-width="25%" height="25%"><br><img id="igr16" width="100%" height="100%" style="display: block"><span id="impr16"></span></td>
+              
+            </tr>
+            <tr>
+              <td width="25%" height="25%"><br><img id="igr17" width="100%" height="100%" style="display: block"><span id="impr17"></span></td>
+              <td width="25%" height="25%"><br><img id="igr18" width="100%" height="100%" style="display: block"><span id="impr18"></span></td>
+              <td width="25%" height="25%"><br><img id="igr19" width="100%" height="100%" style="display: block"><span id="impr19"></span></td>
+              <td width="25%" height="25%"><br><img id="igr20" width="100%" height="100%" style="display: block"><span id="impr20"></span></td>
+
+            </tr>
+  
+            </table>
+            <select id="igraci_select">
+              <option value="null" selected>Izaberi igraca</option>
+            </select>
+            <button id="btnistrazi">Više o tom igraču</button>
+          
+          <div id="div_utakmice">
+            <div data-role="collapsible-set">
+              <div data-role="collapsible">
+                <h1>Prijašnje utakmice</h1>
+                <p id="prijasnje_utakmice"></p>
+              </div>
+              <div data-role="collapsible">
+                <h1>Sljedeće utakmice</h1>
+                <p id="sljedece_utakmice"></p>
+
+              </div>
+
+            </div>
+          </div>
+          <a href target="_blanket" id="fejs"><img src="img/fejs.jpg" class="ikona" id="beze"></a><a href id="sluzbenistr" target="_blanket"><img src="img/ofisl.jpg" id="sluzbena"></a>
+          
+          
+        </div>
+        <div id="div_favoriti" style: hidden>
+          <b><h1><font color="red">Klubovi:</font></h2></b>
+          <ul id="favoritiListaKlub"></ul>
+
+          <br><b><h1><font color="red">Igrači:</font></h2></b>
+          <ul id="favoritiListaIgraci"></ul>
+        </div>
+        
+        
+        <div id="div_igrac" style: hidden>
+          <img id="slika_igraca">
+          <br><b>Ime i prezime:</b>
+          <span id="ime_prezime"></span>
+          <b>Rođen:</b>
+          <span id="rodenje"></span>
+          <b>Nacionalnost:</b>
+          <span id="nacionalnost"></span>
+          <b>Pozicija:</b>
+          <span id="pozicija"></span>
+          <b>Visina i težina:</b>
+          <span id="visina_tezina"></span>
+          <b>Vrijednost:</b>
+          <span id="vrijednost"></span>
+          <b>Trenutna placa:</b>
+          <span id="placa"></span>
+          <b>Opis igrača:</b>
+          <span id="opis_igraca"></span>
+          <button id="btnFavoritIgrac">Dodaj u favorite</button>
+          <button id="btnPovratak">Vrati se</button>
+
+          
+        </div>
+        
+
+        
+        <div data-role="footer" id="naslov">
+          <b>Anđelo Jurišić - PROMA 2019. - Premier League</b>
+        </div>
+        
+
+        
+      
+    </body>
+</html>
