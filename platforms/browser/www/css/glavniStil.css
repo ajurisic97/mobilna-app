@@ -1,0 +1,199 @@
+/* Add a black background color to the top navigation */
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    color: black;
+    float: center;
+    
+  }
+
+
+
+  
+  /* Style the links inside the navigation bar */
+  .topnav a {
+    float: left;
+    color: #a72b2b;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+  }
+  
+  /* Change the color of links on hover 
+  .topnav a:hover {
+    background-color: rgba(92, 37, 221, 0.466);
+    color: black;
+  }*/
+  
+  /* Add a color to the active/current link */
+  .topnav a.active {
+    background-color: rgb(107, 16, 16);
+    color: white;
+  }
+
+
+
+  #naslov{
+    background-color: #333;
+    color: white;
+    max-width: 640px;
+  }
+
+  /*Uredivanje tablica 
+  --------------------------------*/
+  #tablica {
+    font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    color: black;
+    
+    text-align: left;
+    display: table-cell;
+    
+  }
+  
+  #tablica td {
+    border: 1px solid #ddd;
+    padding: 8px;
+  }
+  
+  #tablica tr:nth-child(even){background-color: #f2f2f2;}
+  #tablica tr:nth-child(odd){background-color: rgb(170, 167, 167);}
+  
+  #tablica tr:hover {background-color: rgb(189, 122, 122);}
+
+  #naslov_tablica{
+    background-color: rgb(107, 16, 16);
+    color: white;
+  }
+
+  #labela
+  {
+    display: block;
+    color: rgb(163, 145, 145);
+    text-align: center;
+    font-size: 20px;
+    padding: 0px;
+  }
+
+  #slika_pl {
+  
+  max-width: 640px; /* svojstvo max-width ima prednost nad width
+  manje slike se mogu rastegniti, ali najviše do 640 piksela */
+  max-height: 500px;
+  width: 100%;
+  
+}
+
+#pocetna{
+  background-color: #333;
+  max-width: 640px;
+  width: 100%;
+  color: white;
+  font-size: 12px;
+  border: 5px;
+
+  
+  text-align: justify;
+  
+  
+}
+
+#slika_tim1{
+  
+  width: 150px;
+  height: 150px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  
+  
+}
+.ikona{
+  width: 40px;
+  height: 40px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+#sluzbena{
+  width: 80%;
+  max-width: 280px;
+  height: 40px;
+  float: right;
+}
+
+#span_klub_ime{
+  display: block;
+  text-align: center;
+  font-size: 30px;
+}
+#nadimak_klub{
+  display: block;
+  text-align: center;
+  font-size: 20px;
+  color: rgb(199, 166, 193);
+  float: center;
+}
+
+#tablica_igraci td{
+  
+  
+  width: 140px;
+  min-width: 25%;
+  max-width: 25%;
+  
+  height: 140px;
+}
+
+#potvrdi{
+  margin-top: 10%;
+  margin-left: 65%;
+  width: 30%;
+  
+  
+}
+
+#dodajFavorita{
+  
+  display: block;
+  margin: auto;
+  width: 30%;
+  font-size: 10px;
+  border-radius: 80%;
+  background-color: rgb(189, 96, 189);
+  }
+
+#div_tim{
+  margin-left: 12px;
+  margin-right: 12px;
+}
+
+#impr1,#impr2,#impr3,#impr4,#impr5,#impr6,#impr7,#impr8,#impr9,#impr10,#impr11,#impr12,#impr13,#impr14,#impr15,#impr16,#impr17,#impr18,#impr19,#impr20{
+  font-size: 10px;
+}
+
+#istrazi{
+  display: block;
+  margin: auto;
+  width: 40%;
+  float: center;
+}
+  
+#slika_igraca{
+  border-radius: 50%;
+  max-width: 25%;
+  
+}
+
+#div_igrac{
+  margin: 0 auto;
+  float: center;
+  text-align:center;
+}
+
+
+  
